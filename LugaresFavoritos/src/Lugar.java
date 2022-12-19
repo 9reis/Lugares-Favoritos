@@ -13,7 +13,8 @@ public class Lugar {
 	}
 
 	public void mostraNoMapa() throws IOException, URISyntaxException {
-		Desktop.getDesktop().browse(new URI("http://www.google.com/maps/search/?api=1&query="+nome));
+		String nomeURL = this.nome.replace(" ", "%20");
+		Desktop.getDesktop().browse(new URI("http://www.google.com/maps/search/?api=1&query="+nomeURL));
 	}
 
 	public String getNome() {
