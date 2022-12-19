@@ -5,8 +5,9 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, URISyntaxException {
 
-		Lugar mercado = new Lugar("Praça");
+		Lugar mercado = new Lugar("Ribeira");
 		
+		mercado.setNome(null);
 		mercado.mostraNoMapa();
 		
 	}
