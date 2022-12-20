@@ -2,11 +2,13 @@ import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Lugar {
 
 	private String nome;
-	private String avaliacao;
+	private List<Integer> avaliacoes = new ArrayList<>();
 	
 	public Lugar(String nome) {
 		this.nome = nome.toUpperCase();
@@ -23,6 +25,15 @@ public class Lugar {
 
 	public void setNome(String nome) {
 		this.nome = nome.toUpperCase();
+	}
+
+	public void addAvaliacao(int avaliacao ) {
+		this.avaliacoes.add(avaliacao);
+		
+	}
+
+	public Integer totalAvaliacoes() {
+		return this.avaliacoes.size();
 	}
 
 }
