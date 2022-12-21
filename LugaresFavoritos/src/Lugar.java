@@ -37,7 +37,7 @@ public class Lugar {
 	}
 
 	public Double avaliacaoMedia() {
-		
+
 		return somaDasAvaliacoes()/totalAvaliacoes();
 	}
 
@@ -48,6 +48,20 @@ public class Lugar {
 			soma += avaliacao;
 		}
 		return soma;
+	}
+
+	
+	public String avaliacaoStatus() {
+		
+		Double media = avaliacaoMedia();
+		
+		if( media < 3 ) {
+			return "Ruim";
+		}else if( media >= 3 && media <= 4){
+			return "Razoavel";
+		}else {
+			return "Muito bom";
+		}
 	}
 
 }
