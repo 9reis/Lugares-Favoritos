@@ -36,4 +36,18 @@ public class Lugar {
 		return this.avaliacoes.size();
 	}
 
+	public Double avaliacaoMedia() {
+		
+		return somaDasAvaliacoes()/totalAvaliacoes();
+	}
+
+	private Double somaDasAvaliacoes() {
+		Double soma = 0.0;
+		
+		for(Integer avaliacao : avaliacoes ) {
+			soma += avaliacao;
+		}
+		return soma;
+	}
+
 }

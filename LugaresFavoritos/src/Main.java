@@ -8,12 +8,16 @@ public class Main {
 		Lugar loja = new Lugar("Bom Preço");
 		// mercado.mostraNoMapa();
 
-		loja.addAvaliacao(5);
-		loja.addAvaliacao(4);
+		loja.addAvaliacao(3);
+		loja.addAvaliacao(3);
 		loja.addAvaliacao(3);
 
 		Integer total = loja.totalAvaliacoes();
-		System.out.println(total);
+		System.out.println("Total: " + total);
+		
+		Double media = loja.avaliacaoMedia();
+		System.out.println("Média: " + media);
+		
 	}
 
 }
