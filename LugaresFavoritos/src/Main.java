@@ -9,13 +9,26 @@ public class Main {
 
 		String nomeDoLugar = tela("Qual o nome do lugar?");
 		Lugar lugar = new Lugar(nomeDoLugar);
-	
-		String avaliacaoString = tela("Qual a Avaliação?");
-		int avaliacao = Integer.parseInt(avaliacaoString);
-		lugar.addAvaliacao(avaliacao);
 		
-		tela(lugar.toString());
+		//int i = 0;
+		//while(i<3){i++}
+		while(true) {
+			try {
+				String avaliacaoString = tela("Qual a Avaliação?");
+				int avaliacao = Integer.parseInt(avaliacaoString);
+				lugar.addAvaliacao(avaliacao);
+			}catch(NumberFormatException e) {
+				break;
+			}
+		}
+			telaMsg(lugar);
+			lugar.mostraNoMapa();
 		
+		
+	}
+
+	private static void telaMsg(Lugar lugar) {
+		JOptionPane.showMessageDialog(null, lugar);
 	}
 
 	private static String tela(String pergunta) {
