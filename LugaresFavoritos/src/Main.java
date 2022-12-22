@@ -1,5 +1,10 @@
 import javax.swing.JOptionPane;
 
+/**
+ * Classe responsável pelo fluxo principal do projeto
+ * @author Lucas Reis 
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) throws Exception {
@@ -27,12 +32,21 @@ public class Main {
 		
 	}
 
+	/**
+	 * Exibe tela com resumo de um lugar
+	 * @param lugar - Lugar que será pesquisado 
+	 */
 	private static void telaMsg(Lugar lugar) {
 		JOptionPane.showMessageDialog(null, lugar);
 	}
 
-	private static String tela(String pergunta) {
-		return JOptionPane.showInputDialog(pergunta);
+	/**
+	 * Exibe uma mensagem na tela e espera um input do usuário 
+	 * @param String - String que será exibida na tela 
+	 * @return
+	 */
+	private static String tela(String String) {
+		return JOptionPane.showInputDialog(String);
 	}
 
 }
