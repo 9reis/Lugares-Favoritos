@@ -63,5 +63,13 @@ public class Lugar {
 			return "Muito bom";
 		}
 	}
-
+	
+	@Override
+	public String toString() {
+		
+		return "nome: " + nome + "\n"
+				+ "Total de avaliações: " + totalAvaliacoes() + "\n"
+				+ "Media: " + avaliacaoMedia() + "\n"
+				+ "Status: " + avaliacaoStatus();
+	}
 }
