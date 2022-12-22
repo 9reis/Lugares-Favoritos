@@ -28,6 +28,10 @@ public class Lugar {
 	}
 
 	public void addAvaliacao(int avaliacao ) {
+		if(avaliacao < 0 || avaliacao > 5) {
+			//estourar um erro 
+			throw new RuntimeException("Avaliação deve ter de 1 a 5 estrelas");
+		}
 		this.avaliacoes.add(avaliacao);
 		
 	}

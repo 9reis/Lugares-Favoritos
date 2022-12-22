@@ -1,11 +1,8 @@
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import javax.swing.JOptionPane;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, URISyntaxException {
+	public static void main(String[] args) throws Exception {
 
 		String nomeDoLugar = tela("Qual o nome do lugar?");
 		Lugar lugar = new Lugar(nomeDoLugar);
@@ -17,13 +14,16 @@ public class Main {
 				String avaliacaoString = tela("Qual a Avaliação?");
 				int avaliacao = Integer.parseInt(avaliacaoString);
 				lugar.addAvaliacao(avaliacao);
-			}catch(NumberFormatException e) {
+			}catch(NumberFormatException e ) {
+				break;
+			}
+			catch(Exception e) {
+				JOptionPane.showMessageDialog(null, e);
 				break;
 			}
 		}
 			telaMsg(lugar);
 			lugar.mostraNoMapa();
-		
 		
 	}
 
